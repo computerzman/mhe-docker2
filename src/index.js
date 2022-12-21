@@ -48,7 +48,7 @@ const URI = `mongodb://${DB_USER}:${DB_PASWWORD}@${DB_HOST}:${DB_PORT}`;
  
 app.get('/', (req, res) => {
     redisClient.set('products', 'products...')
-    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws ${process.env.NODE_ENV}</h1>`)
+    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub ${process.env.NODE_ENV}</h1>`)
 });
 
 app.get('/getdata', async (req, res) => {
