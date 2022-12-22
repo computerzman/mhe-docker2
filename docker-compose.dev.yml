@@ -8,4 +8,5 @@ services:
       - ./src:/app/src:ro
     environment:
       - NODE_ENV=development
+      - HTTP_PORT=8040
     command: npm run start-dev
