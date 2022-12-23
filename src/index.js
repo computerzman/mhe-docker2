@@ -19,7 +19,6 @@ redisClient.on('error', (err)=>console.log('Redis Client Error', err))
 redisClient.on('connect', ()=>console.log('connected to redis ...'))
 redisClient.connect();
 
-
 // connect db
 /* const POSTGRES_DB_USER = "root";
 const POSTGRES_DB_PASWWORD = "example";
