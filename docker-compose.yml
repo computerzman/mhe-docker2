@@ -1,7 +1,7 @@
 version: '3'
 services:
   node-app:
-    container_name: express-node-app-container
+    #container_name: express-node-app-container
     image: computerzman/mhe-docker
     ports:
       - "4000:4000"
