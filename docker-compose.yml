@@ -11,8 +11,8 @@ services:
         parallelism: 2
         delay: 10s
       restart_policy:
-        condition: on-failure  
-        delay: 10s  
+        condition: on-failure
+        delay: 5s
     depends_on:
       - postgres  
       - redis
