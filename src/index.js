@@ -2,6 +2,7 @@ const express = require('express');
 //const mongoose = require('mongoose');
 const { Client } = require('pg');
 const redis = require('redis');
+const os = require('os');
 
 //init app
 const PORT = process.env.PORT || 4000;
@@ -20,7 +21,7 @@ redisClient.connect();
 
 
 // connect db
-const POSTGRES_DB_USER = "root";
+/* const POSTGRES_DB_USER = "root";
 const POSTGRES_DB_PASWWORD = "example";
 const POSTGRES_DB_PORT=5432;
 const POSTGRES_DB_HOST = 'postgres'; //'172.23.0.2';
@@ -33,7 +34,7 @@ postgresClient
     .connect()
     .then(()=>console.log('connect to postgres db ..'))
     .catch((err)=>console.log('failed to connect to postgres db: ', err));
-
+ */
  
 /* const DB_USER = 'root';
 const DB_PASWWORD = 'example';
@@ -48,6 +49,7 @@ const URI = `mongodb://${DB_USER}:${DB_PASWWORD}@${DB_HOST}:${DB_PORT}`;
  
 app.get('/', (req, res) => {
     redisClient.set('products', 'products...')
+    console.log(`traffice from ${os.hostname}`);
     res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub ${process.env.NODE_ENV}</h1>`)
 });
 
