@@ -66,4 +66,3 @@ volumes:
   #mongo-db:
   #  name: my-mongo-db-volume
   postgres-db:
-    name: my-postgres-db-volume    
