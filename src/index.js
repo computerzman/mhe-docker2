@@ -49,13 +49,13 @@ const URI = `mongodb://${DB_USER}:${DB_PASWWORD}@${DB_HOST}:${DB_PORT}`;
 app.get('/', (req, res) => {
     redisClient.set('products', 'products...')
     console.log(`traffice from ${os.hostname}`);
-    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub with watchtower ${process.env.NODE_ENV}</h1>`)
+    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub with docker swarm ${process.env.NODE_ENV}</h1>`)
 });
 
 app.get('/getdata', async (req, res) => {
     const products = await redisClient.get('products');
     //const products = "test";
-    res.send(`<h1> Redis Data is  ${process.env.NODE_ENV}</h1> <h2>${products}</h2>`)
+    res.send(`<h1> Redis Data is docker swarm  ${process.env.NODE_ENV}</h1> <h2>${products}</h2>`)
 });
 
 app.listen(PORT, ()=>console.log(`app is up and running on port: ${PORT}`));  
