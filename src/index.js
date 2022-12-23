@@ -46,11 +46,11 @@ const URI = `mongodb://${DB_USER}:${DB_PASWWORD}@${DB_HOST}:${DB_PORT}`;
     .then(()=>console.log('connect to db ..'))
     .catch((err)=>console.log('failed to connect to bd: ', err));
 */
- 
+  
 app.get('/', (req, res) => {
     redisClient.set('products', 'products...')
     console.log(`traffice from ${os.hostname}`);
-    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub ${process.env.NODE_ENV}</h1>`)
+    res.send(`<h1> Hello! Mohamed Hassan Elagamy 5 Aws using docker hub with watchtower ${process.env.NODE_ENV}</h1>`)
 });
 
 app.get('/getdata', async (req, res) => {
