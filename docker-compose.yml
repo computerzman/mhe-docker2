@@ -63,7 +63,7 @@ services:
       - NGINX_PORT=80
 
 volumes:
-  mongo-db:
-    name: my-mongo-db-volume
+  #mongo-db:
+  #  name: my-mongo-db-volume
   postgres-db:
     name: my-postgres-db-volume    
